@@ -2,26 +2,92 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
-    <link href="{{url_for('static',filename='static/css/styles.css')}}" rel="stylesheet" />
-    <link href="https://cdn.datatables.net/1.10.20/css/dataTables.bootstrap4.min.css" rel="stylesheet" crossorigin="anonymous" />
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/js/all.min.js" crossorigin="anonymous"></script>
-    <title>Flask_Web</title>
+    <title>MANCHESTER UNITED</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    <script src="https://kit.fontawesome.com/20962f3e4b.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
+    <script src="{{url_for('static',filename='js/top.js')}}"></script>
+    <script src="{{url_for('static',filename='js/bannerSlider.js')}}"></script>
+    <script src="{{url_for('static',filename='js/best.js')}}"></script>
+    
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">
+    <link href="{{url_for('static',filename='css/style.css')}}" rel="stylesheet" />
+    <link href="{{url_for('static',filename='css/member.css')}}" rel="stylesheet" />
 </head>
+
+    <div id="wrapper">
+        <header>
+            <div class="top">
+                <div>
+                    <a href="#"><i class="far fa-user"></i>&nbsp;LOGIN</a>
+                    <a href="#">SIGN UP</a>
+                    <a href="#">MYPAGE</a>
+                    <a href="#"><i class="fa fa-shopping-cart" aria-hidden="true"></i>&nbsp;장바구니</a>
+                </div>
+            </div>
+            <div class="logo">
+                <div>
+                    <a href="#"><img src="../static/img/mu_header_logo.png" alt="로고"></a>
+                    <form action="#">
+                        <input type="text" name="search" />
+                        <button><i class="fa fa-search"></i></button>
+                    </form>
+                </div>
+            </div>
+            <div class="menu" style="width: 1200px;">
+                <div>
+                    <ul>
+                        <li><a href="#">히트상품</a></li>
+                        <li><a href="#">추천상품</a></li>
+                        <li><a href="#">최신상품</a></li>
+                        <li><a href="#">인기상품</a></li>
+                        <li><a href="#">할인상품</a></li>
+                    </ul>
+                    <ul>
+                        <li><a href="#">이벤트</a></li>
+                        <li><a href="#">주문조회</a></li>
+                        <li><a href="#">공지사항</a></li>
+                        <li><a href="#">1:1문의</a></li>
+                        <li><a href="#">FAQ</a></li>
+                    </ul>
+                </div>
+            </div>
+</header>
 <body>
-    {% include "includes/_navbar.html" %}
-    <div class="container">
-        <!-- Content here --> {% block body %}
-        {% endblock %} </div>
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
-    <script src="https://code.jquery.com/jquery-3.5.1.min.js" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
-    <script src="{{url_for('static',filename='js/scripts.js')}}"></script>
-    <script src="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.min.js" crossorigin="anonymous"></script>
-    <script src="https://cdn.datatables.net/1.10.20/js/dataTables.bootstrap4.min.js" crossorigin="anonymous"></script>
-    <script src="static/assets/demo/datatables-demo.js"></script>
+{% block body %}
+{% endblock %}
+<footer>
+    <ul>
+        <li><a href="#">개인정보 보호 정책</a></li>
+        <li><a href="#">이용약관</a></li>
+        <li><a href="#">사이트맵</a></li>
+        <li><a href="#">더 알아보기</a></li>
+    </ul>
+    
+    <div>
+        <p class="footer1">
+            <img src="../static/img/mu_footer_logo.png" alt="푸터로고">
+        </p>
+        <p class="footer2">
+            <strong>MANCHESTER UNITED</strong><br />
+            영국 스트렛포드 올드 트래포드<br />
+            대표이사 : 김우드워드<br />
+            사업자등록번호 : 110-11-12345 사업자정보확인<br />
+            통신판매업신고 : 부산 12345호 Fax : 051-211-1123<br />
+        </p>
+        <p class="footer3">
+            <strong>고객센터</strong><br />
+            Tel : 051-243-1234 (평일 9:00~18:00)<br />
+            올드 트래포드 전용 : 1554-1212 (365일 9:00~18:00)<br />
+            부산시 부산진구 구덕로 123번길 맨체스터빌딩<br />
+            Fax : 051-243-1111 | Mail : MU@ManUtd.co.kr<br />
+        </p>
+    </div>
+</footer>
+<button type="button" id="top" style="display: inline-block;">상단이동</button>
+</div>
 </body>
 </html>

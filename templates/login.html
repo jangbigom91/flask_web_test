@@ -1,20 +1,32 @@
-{% extends "layouts.html"%}
-<!-- 진자 엔진의 import방법 = extends -->
+{% extends "layouts.html" %}
 {% block body %}
-<form action="/login" method="post">
-    ​<div class="form-group">
-        <label>EMAIL</label>
-        <input type="email" name="email" class="form-control" placeholder="ID">
-    </div>
-    <div class="form-group">
-        <label>PW</label>
-        <input type="password" name="userpw" class="form-control" placeholder="Password">
-    </div>
-    <input class="btn btn-dark btn-dark" type="submit" value="LOGIN">
-</form>
-<h1 class="display-4">MAIN HOME PAGE</h1>
-<p class="lead">This Application is build using by python and Flask Framework</p>
-<!--<a class="btn btn-dark btn-dark" href="/assignment" role="button">Assignment</a> -->
-<hr class="my-4">
-<a class="btn btn-warning btn-dark" href="/register" role="button">SIGN UP</a>
+	<div id="member-wrapper">
+		<div id="member-login">
+			<section class="login">
+                <img src="../static/img/mu_login.png" alt="로그인" />
+                <img src="../static/img/mu_header_logo.png" alt="로고"/>
+				<form action="#">
+					<div>
+						<label>
+							<span><img src="../static/img/member_txt_id.gif" alt="아이디"></span> 
+							<input type="text" name="uid"/>
+						</label>
+						<label>
+							<span><img src="../static/img/member_txt_pass.gif" alt="비밀번호"></span> 
+							<input type="password" name="pass"/>
+						</label>
+					</div>
+                    <button type="button">로그인</button>
+                    
+					<span>
+						<a href="#">아이디찾기</a>
+						<a href="#">비밀번호찾기</a>
+						<a href="#">회원가입</a>
+					</span>
+				</form>
+				<img src="../static/img/mu_login_banner.png" alt="banner">
+			</section>
+		</div>
+		
+	</div>
 {% endblock %}
