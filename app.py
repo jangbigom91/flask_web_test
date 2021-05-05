@@ -47,8 +47,42 @@ def admin_list():
 def admin_register():
     return render_template("admin_register.html")
 
-# shop 페이지
 # sub 페이지
+@app.route('/delivery-check', methods = ['GET', 'POST'])
+def deliverycheck():
+    return render_template("delivery-check.html")
+
+@app.route('/event', methods = ['GET', 'POST'])
+def event():
+    return render_template("event.html")
+
+@app.route('/faq', methods = ['GET', 'POST'])
+def faq():
+    return render_template("faq.html")
+
+@app.route('/notice', methods = ['GET', 'POST'])
+def notice():
+    return render_template("notice.html")
+
+@app.route('/qna', methods = ['GET', 'POST'])
+def qna():
+    return render_template("qna.html")
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+# shop 페이지
 
 
 if __name__ == '__main__':
