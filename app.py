@@ -49,7 +49,7 @@ def admin_register():
 
 # sub 페이지
 @app.route('/delivery-check', methods = ['GET', 'POST'])
-def deliverycheck():
+def delivery_check():
     return render_template("delivery-check.html")
 
 @app.route('/event', methods = ['GET', 'POST'])
@@ -68,22 +68,26 @@ def notice():
 def qna():
     return render_template("qna.html")
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 # shop 페이지
+@app.route('/cart', methods = ['GET', 'POST'])
+def cart():
+    return render_template("cart.html")
 
+@app.route('/search', methods = ['GET', 'POST'])
+def search():
+    return render_template("search.html")
+
+@app.route('/order', methods = ['GET', 'POST'])
+def order():
+    return render_template("order.html")
+
+@app.route('/order-complete', methods = ['GET', 'POST'])
+def order_complete():
+    return render_template("order-complete.html")
+
+@app.route('/view', methods = ['GET', 'POST'])
+def view():
+    return render_template("view.html")
 
 if __name__ == '__main__':
     app.run()
