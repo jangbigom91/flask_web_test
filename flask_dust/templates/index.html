@@ -16,15 +16,22 @@
 				<div class="inner">
 					<a href="/" class="logo"><strong>Fine Dust</strong> Project</a>
 					<nav id="nav">
-						<a href="index.html">Home</a>
-						<a href="/news">News</a>
-						<a href="/info">Info</a>
-						<a href="/login">Login</a>   <!--if문 걸어서 userid 접속했을 때 logout기능 추가-->
+						{% if userid %}
+							<a href="index.html">Home</a>
+							<a href="/news">News</a>
+							<a href="/info">Info</a>
+							{{userid}}<a href="/logout">Logout</a>   <!--if문 걸어서 userid 접속했을 때 logout기능 추가-->
+						{% else %}
+							<a href="index.html">Home</a>
+							<a href="/news">News</a>
+							<a href="/info">Info</a>
+							<a href="/login">Login</a>
+						{% endif %}
 					</nav>
 					<a href="#navPanel" class="navPanelToggle"><span class="fa fa-bars" style="background: #6cc091;"></span></a>
 				</div>
 			</header>
-
+			
 		<!-- Banner -->
 			<section id="banner">
 				<div class="inner">

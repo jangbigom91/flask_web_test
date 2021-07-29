@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request, redirect
+from flask import Flask, render_template, request, redirect, session
 from passlib.hash import sha256_crypt
 import pymysql
 
@@ -75,9 +75,10 @@ def register():
     else:
         return render_template("register.html")
 
-# @app.route('/logout')
-# def logout():
-    
+@app.route('/logout', methods = ['GET'])
+def logout():
+    session.pop('userid', None)
+    return redirect("/")
 
 
 if __name__ == '__main__':
